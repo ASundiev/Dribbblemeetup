@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Katochimoto/Dribbblemeetup.git"
+    "url": "git+https://github.com/ASundiev/Dribbblemeetup.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Katochimoto/Dribbblemeetup/issues"
+    "url": "https://github.com/ASundiev/Dribbblemeetup/issues"
   },
-  "homepage": "https://github.com/Katochimoto/Dribbblemeetup#readme"
+  "homepage": "https://github.com/ASundiev/Dribbblemeetup#readme"
 }
