@@ -1,0 +1,19 @@
+{
+  "name": "dribbblemeetup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "www/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASundiev/Dribbblemeetup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASundiev/Dribbblemeetup/issues"
+  },
+  "homepage": "https://github.com/ASundiev/Dribbblemeetup#readme"
+}
