@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "ProximaNova-BoldIt";
+    src: url("proximanova-boldIt.eot");
+    src: url("proximanova-boldIt.eot?#iefix") format("embedded-opentype"),
+         url("proximanova-boldIt.woff2") format("woff2"),
+         url("proximanova-boldIt.woff") format("woff"),
+         url("proximanova-boldIt.ttf") format("ttf"),
+         url("proximanova-boldIt.svg#ProximaNova-BoldIt") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
