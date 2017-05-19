@@ -1,0 +1,400 @@
+include ./mixins/mixins.pug
+
+doctype html
+
+html
+
+    include ./includes/head.pug
+
+    body
+        div.js-page
+            div.pane.js-pane
+                div.pane__menu
+                    a.pane__anc.pane__anc--hidden.js-scroll-anc
+                    //a.pane__anc(href="tv") Трансляция
+                    a.pane__anc.js-scroll-anc(href="schedule") Расписание
+                    a.pane__anc.js-scroll-anc(href="speak") Спикеры
+                    a.pane__anc.js-scroll-anc(href="location") Место проведения
+                div.pane__social
+                    <svg xmlns="http://www.w3.org/2000/svg" class="pane__social-ic" viewBox="0 0 18 21">
+                        <path fill="currentColor" fill-rule="evenodd" d="M10.131 4.423a.393.393 0 0 0 .157-.33 7.724 7.724 0 0 1-.002-.155C10.286 1.764 12.014 0 14.143 0 16.272 0 18 1.764 18 3.938c0 2.173-1.728 3.937-3.857 3.937a3.796 3.796 0 0 1-2.509-.947.37.37 0 0 0-.47-.023c-.726.535-2.815 2.084-3.406 2.523a.308.308 0 0 0-.116.306 4.07 4.07 0 0 1 0 1.532.307.307 0 0 0 .116.306c.591.44 2.68 1.988 3.405 2.526.143.105.34.095.472-.025a3.786 3.786 0 0 1 2.508-.948c2.129 0 3.857 1.764 3.857 3.938C18 19.236 16.272 21 14.143 21c-2.129 0-3.857-1.764-3.857-3.938 0-.051 0-.103.003-.154a.393.393 0 0 0-.158-.33l-3.724-2.763a.396.396 0 0 0-.459-.008c-.602.4-1.32.63-2.09.63C1.727 14.438 0 12.674 0 10.5s1.728-3.938 3.857-3.938c.77 0 1.49.232 2.092.63.14.095.322.091.457-.01.745-.55 3.075-2.277 3.725-2.76z"/>
+                    </svg>
+                    a.pane__social-l(href="")
+                        <svg xmlns="http://www.w3.org/2000/svg" class="pane__social-fb" viewBox="0 0 13 22">
+                            <path fill="currentColor" fill-rule="evenodd" d="M12.204.004L9.326 0C6.092 0 4.003 2.073 4.003 5.28v2.435H1.109a.445.445 0 0 0-.453.438v3.527c0 .242.203.438.453.438h2.894v8.9c0 .242.202.438.452.438h3.776c.25 0 .453-.196.453-.437v-8.901h3.383c.25 0 .453-.196.453-.438l.001-3.527a.43.43 0 0 0-.132-.31.46.46 0 0 0-.32-.128H8.684V5.651c0-.992.244-1.495 1.581-1.495l1.939-.001c.25 0 .452-.196.452-.438V.442a.445.445 0 0 0-.452-.438z"/>
+                        </svg>
+                    a.pane__social-l(href="")
+                        <svg xmlns="http://www.w3.org/2000/svg" class="pane__social-tw" viewBox="0 0 20 17">
+                            <path fill="currentColor" fill-rule="evenodd" d="M20 1.933a8.159 8.159 0 0 1-2.356.65A4.138 4.138 0 0 0 19.448.301a8.244 8.244 0 0 1-2.607 1.001A4.08 4.08 0 0 0 13.846 0C11.58 0 9.743 1.847 9.743 4.124c0 .323.036.639.106.94A11.627 11.627 0 0 1 1.393.754 4.111 4.111 0 0 0 .84 2.827 4.13 4.13 0 0 0 2.663 6.26a4.086 4.086 0 0 1-1.858-.517v.051a4.124 4.124 0 0 0 3.29 4.045 4.134 4.134 0 0 1-1.08.145c-.266 0-.522-.027-.773-.077a4.108 4.108 0 0 0 3.832 2.865 8.203 8.203 0 0 1-5.095 1.763c-.332 0-.658-.02-.979-.056a11.552 11.552 0 0 0 6.289 1.856c7.547 0 11.673-6.286 11.673-11.737l-.014-.534A8.218 8.218 0 0 0 20 1.933z"/>
+                        </svg>
+                    a.pane__social-l(href="")
+                        <svg xmlns="http://www.w3.org/2000/svg" class="pane__social-vk" viewBox="0 0 24 13">
+                            <path fill="currentColor" fill-rule="evenodd" d="M23.53 11.687a1.532 1.532 0 0 0-.08-.148c-.41-.708-1.194-1.578-2.352-2.61l-.024-.023-.013-.012-.012-.012h-.012c-.526-.48-.859-.803-.998-.968-.255-.315-.312-.634-.173-.957.099-.244.469-.76 1.109-1.547.337-.417.603-.752.8-1.004 1.421-1.81 2.037-2.968 1.848-3.472L23.55.817c-.05-.071-.177-.136-.382-.195-.206-.06-.468-.069-.789-.03l-3.547.024a.48.48 0 0 0-.246.006l-.16.035-.062.03-.049.035a.539.539 0 0 0-.136.124.803.803 0 0 0-.122.207 18.942 18.942 0 0 1-1.318 2.657c-.304.488-.583.911-.838 1.27a6.152 6.152 0 0 1-.64.79c-.173.17-.329.306-.469.408-.14.103-.246.146-.32.13a9.353 9.353 0 0 1-.21-.047.799.799 0 0 1-.276-.29 1.257 1.257 0 0 1-.142-.46 4.873 4.873 0 0 1-.043-.478 9.58 9.58 0 0 1 .006-.567c.009-.245.013-.41.013-.496 0-.3.006-.624.018-.975l.03-.832c.01-.205.013-.421.013-.65a2.62 2.62 0 0 0-.043-.537 1.785 1.785 0 0 0-.13-.378.645.645 0 0 0-.252-.283 1.458 1.458 0 0 0-.412-.16c-.435-.094-.99-.145-1.663-.153C9.854-.014 8.872.08 8.437.285A1.65 1.65 0 0 0 7.97.64c-.148.174-.168.268-.062.284.493.07.842.24 1.047.507l.074.142c.058.103.115.284.173.544.057.26.094.547.11.861a8.815 8.815 0 0 1 0 1.477c-.04.41-.08.728-.116.956a1.856 1.856 0 0 1-.167.555 2.315 2.315 0 0 1-.148.26.208.208 0 0 1-.061.059.958.958 0 0 1-.333.06c-.115 0-.254-.056-.418-.166a2.912 2.912 0 0 1-.512-.455 6.088 6.088 0 0 1-.597-.809 13.939 13.939 0 0 1-.69-1.228l-.197-.343c-.123-.22-.291-.54-.505-.962a18.18 18.18 0 0 1-.566-1.222.783.783 0 0 0-.296-.378L4.644.745a.855.855 0 0 0-.197-.1 1.35 1.35 0 0 0-.284-.077L.788.592C.444.592.21.667.086.816L.037.887A.369.369 0 0 0 0 1.076c0 .087.025.193.074.319A38.294 38.294 0 0 0 1.68 4.607 35.77 35.77 0 0 0 3.19 7.099c.427.63.862 1.224 1.306 1.783.443.559.737.917.88 1.074.144.158.257.276.339.355l.308.283c.197.19.486.415.868.68.382.263.805.523 1.269.779a7.054 7.054 0 0 0 1.62.625 5.83 5.83 0 0 0 1.798.196h1.416c.288-.024.505-.11.653-.26l.05-.06a.765.765 0 0 0 .091-.218c.03-.098.044-.207.044-.324a3.736 3.736 0 0 1 .08-.916c.06-.271.13-.476.21-.614.077-.137.166-.254.264-.348.098-.094.168-.152.21-.171a.822.822 0 0 1 .098-.042c.197-.062.429-.001.696.184.267.185.517.413.751.685.234.271.515.576.844.915.328.338.616.59.862.756l.246.141c.165.095.378.182.641.26.262.079.492.099.69.06l3.153-.048c.311 0 .554-.05.726-.148.173-.098.275-.206.308-.324a.878.878 0 0 0 .006-.402 1.435 1.435 0 0 0-.086-.313z"/>
+                        </svg>
+                    a.pane__social-l(href="")
+                        <svg xmlns="http://www.w3.org/2000/svg" class="pane__social-od" viewBox="0 0 12 21">
+                            <g fill="currentColor" fill-rule="evenodd">
+                                <path d="M6 3.088c1.187 0 2.153.978 2.153 2.181 0 1.202-.966 2.18-2.153 2.18-1.186 0-2.153-.978-2.153-2.18 0-1.203.967-2.181 2.153-2.181zm0 7.448c2.868 0 5.2-2.362 5.2-5.267C11.2 2.363 8.868 0 6 0 3.132 0 .8 2.363.8 5.27c0 2.904 2.332 5.266 5.2 5.266z"/>
+                                <path d="M8.163 14.735a9.943 9.943 0 0 0 3.105-1.303 1.6 1.6 0 0 0 .491-2.189 1.553 1.553 0 0 0-2.16-.499 6.712 6.712 0 0 1-7.198 0 1.553 1.553 0 0 0-2.16.5 1.6 1.6 0 0 0 .49 2.188 9.956 9.956 0 0 0 3.105 1.303L.847 17.763a1.602 1.602 0 0 0 0 2.244 1.552 1.552 0 0 0 2.217 0l2.935-2.976 2.939 2.976c.611.62 1.603.62 2.214 0a1.6 1.6 0 0 0 0-2.244l-2.989-3.028"/>
+                            </g>
+                        </svg>
+                a.pane__burger.js-burger(href="#")
+                    span.pane__burger-line
+                    span.pane__burger-line
+                    span.pane__burger-line
+                a.pane__logo(href="https://my.com/" target="_blank")
+            div.wrapper
+                div.wrapper__in
+                    div.wrapper__top-push
+                    div.screen.js-screen.js-scroll-block
+                        div.screen__decor-left
+                        div.screen__decor-left-2
+                        div.screen__decor-right
+
+                        div.screen__decor-left-mobile
+                        div.screen__decor-right-mobile
+                        div.screen__decor-bottom-mobile
+                        div.screen__logo
+                            a(href="#").screen__button
+                                span.screen__button-bg
+                                    span.screen__button-in Регистрация
+                        div.screen__logo-mobile
+                            a(href="#").screen__button
+                                span.screen__button-bg
+                                    span.screen__button-in Регистрация
+                    div.content-area
+                        div.content-area__decor-1
+                        div.content-area__decor-2
+
+                        div.content-area__side-1.js-side-parallax-1
+                        div.content-area__side-2.js-side-parallax-2
+                        div.content-area__side-3.js-side-parallax-3
+                        div.container
+                            div.container__decor
+                            div.container__decor-1
+
+                            div.container__side-1.js-side-parallax-4
+                            div.container__side-2.js-side-parallax-5
+                            div.container__side-3.js-side-parallax-6
+
+                            div.container__inner
+                                div.social-mobile
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="social-mobile__social-ic" width="18" height="21" viewBox="0 0 18 21">
+                                        <path fill="currentColor" fill-rule="evenodd" d="M10.131 4.423a.393.393 0 0 0 .157-.33 7.724 7.724 0 0 1-.002-.155C10.286 1.764 12.014 0 14.143 0 16.272 0 18 1.764 18 3.938c0 2.173-1.728 3.937-3.857 3.937a3.796 3.796 0 0 1-2.509-.947.37.37 0 0 0-.47-.023c-.726.535-2.815 2.084-3.406 2.523a.308.308 0 0 0-.116.306 4.07 4.07 0 0 1 0 1.532.307.307 0 0 0 .116.306c.591.44 2.68 1.988 3.405 2.526.143.105.34.095.472-.025a3.786 3.786 0 0 1 2.508-.948c2.129 0 3.857 1.764 3.857 3.938C18 19.236 16.272 21 14.143 21c-2.129 0-3.857-1.764-3.857-3.938 0-.051 0-.103.003-.154a.393.393 0 0 0-.158-.33l-3.724-2.763a.396.396 0 0 0-.459-.008c-.602.4-1.32.63-2.09.63C1.727 14.438 0 12.674 0 10.5s1.728-3.938 3.857-3.938c.77 0 1.49.232 2.092.63.14.095.322.091.457-.01.745-.55 3.075-2.277 3.725-2.76z"/>
+                                    </svg>
+                                    div.social-mobile__links
+                                        a.social-mobile__social-l(href="")
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22">
+                                                <path fill="currentColor" fill-rule="evenodd" d="M12.204.004L9.326 0C6.092 0 4.003 2.073 4.003 5.28v2.435H1.109a.445.445 0 0 0-.453.438v3.527c0 .242.203.438.453.438h2.894v8.9c0 .242.202.438.452.438h3.776c.25 0 .453-.196.453-.437v-8.901h3.383c.25 0 .453-.196.453-.438l.001-3.527a.43.43 0 0 0-.132-.31.46.46 0 0 0-.32-.128H8.684V5.651c0-.992.244-1.495 1.581-1.495l1.939-.001c.25 0 .452-.196.452-.438V.442a.445.445 0 0 0-.452-.438z"/>
+                                            </svg>
+                                        a.social-mobile__social-l(href="")
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                                <path fill="currentColor" fill-rule="evenodd" d="M20 1.933a8.159 8.159 0 0 1-2.356.65A4.138 4.138 0 0 0 19.448.301a8.244 8.244 0 0 1-2.607 1.001A4.08 4.08 0 0 0 13.846 0C11.58 0 9.743 1.847 9.743 4.124c0 .323.036.639.106.94A11.627 11.627 0 0 1 1.393.754 4.111 4.111 0 0 0 .84 2.827 4.13 4.13 0 0 0 2.663 6.26a4.086 4.086 0 0 1-1.858-.517v.051a4.124 4.124 0 0 0 3.29 4.045 4.134 4.134 0 0 1-1.08.145c-.266 0-.522-.027-.773-.077a4.108 4.108 0 0 0 3.832 2.865 8.203 8.203 0 0 1-5.095 1.763c-.332 0-.658-.02-.979-.056a11.552 11.552 0 0 0 6.289 1.856c7.547 0 11.673-6.286 11.673-11.737l-.014-.534A8.218 8.218 0 0 0 20 1.933z"/>
+                                            </svg>
+                                        a.social-mobile__social-l(href="")
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="13" viewBox="0 0 24 13">
+                                                <path fill="currentColor" fill-rule="evenodd" d="M23.53 11.687a1.532 1.532 0 0 0-.08-.148c-.41-.708-1.194-1.578-2.352-2.61l-.024-.023-.013-.012-.012-.012h-.012c-.526-.48-.859-.803-.998-.968-.255-.315-.312-.634-.173-.957.099-.244.469-.76 1.109-1.547.337-.417.603-.752.8-1.004 1.421-1.81 2.037-2.968 1.848-3.472L23.55.817c-.05-.071-.177-.136-.382-.195-.206-.06-.468-.069-.789-.03l-3.547.024a.48.48 0 0 0-.246.006l-.16.035-.062.03-.049.035a.539.539 0 0 0-.136.124.803.803 0 0 0-.122.207 18.942 18.942 0 0 1-1.318 2.657c-.304.488-.583.911-.838 1.27a6.152 6.152 0 0 1-.64.79c-.173.17-.329.306-.469.408-.14.103-.246.146-.32.13a9.353 9.353 0 0 1-.21-.047.799.799 0 0 1-.276-.29 1.257 1.257 0 0 1-.142-.46 4.873 4.873 0 0 1-.043-.478 9.58 9.58 0 0 1 .006-.567c.009-.245.013-.41.013-.496 0-.3.006-.624.018-.975l.03-.832c.01-.205.013-.421.013-.65a2.62 2.62 0 0 0-.043-.537 1.785 1.785 0 0 0-.13-.378.645.645 0 0 0-.252-.283 1.458 1.458 0 0 0-.412-.16c-.435-.094-.99-.145-1.663-.153C9.854-.014 8.872.08 8.437.285A1.65 1.65 0 0 0 7.97.64c-.148.174-.168.268-.062.284.493.07.842.24 1.047.507l.074.142c.058.103.115.284.173.544.057.26.094.547.11.861a8.815 8.815 0 0 1 0 1.477c-.04.41-.08.728-.116.956a1.856 1.856 0 0 1-.167.555 2.315 2.315 0 0 1-.148.26.208.208 0 0 1-.061.059.958.958 0 0 1-.333.06c-.115 0-.254-.056-.418-.166a2.912 2.912 0 0 1-.512-.455 6.088 6.088 0 0 1-.597-.809 13.939 13.939 0 0 1-.69-1.228l-.197-.343c-.123-.22-.291-.54-.505-.962a18.18 18.18 0 0 1-.566-1.222.783.783 0 0 0-.296-.378L4.644.745a.855.855 0 0 0-.197-.1 1.35 1.35 0 0 0-.284-.077L.788.592C.444.592.21.667.086.816L.037.887A.369.369 0 0 0 0 1.076c0 .087.025.193.074.319A38.294 38.294 0 0 0 1.68 4.607 35.77 35.77 0 0 0 3.19 7.099c.427.63.862 1.224 1.306 1.783.443.559.737.917.88 1.074.144.158.257.276.339.355l.308.283c.197.19.486.415.868.68.382.263.805.523 1.269.779a7.054 7.054 0 0 0 1.62.625 5.83 5.83 0 0 0 1.798.196h1.416c.288-.024.505-.11.653-.26l.05-.06a.765.765 0 0 0 .091-.218c.03-.098.044-.207.044-.324a3.736 3.736 0 0 1 .08-.916c.06-.271.13-.476.21-.614.077-.137.166-.254.264-.348.098-.094.168-.152.21-.171a.822.822 0 0 1 .098-.042c.197-.062.429-.001.696.184.267.185.517.413.751.685.234.271.515.576.844.915.328.338.616.59.862.756l.246.141c.165.095.378.182.641.26.262.079.492.099.69.06l3.153-.048c.311 0 .554-.05.726-.148.173-.098.275-.206.308-.324a.878.878 0 0 0 .006-.402 1.435 1.435 0 0 0-.086-.313z"/>
+                                            </svg>
+                                        a.social-mobile__social-l(href="")
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="21" viewBox="0 0 12 21">
+                                                <g fill="currentColor" fill-rule="evenodd">
+                                                    <path d="M6 3.088c1.187 0 2.153.978 2.153 2.181 0 1.202-.966 2.18-2.153 2.18-1.186 0-2.153-.978-2.153-2.18 0-1.203.967-2.181 2.153-2.181zm0 7.448c2.868 0 5.2-2.362 5.2-5.267C11.2 2.363 8.868 0 6 0 3.132 0 .8 2.363.8 5.27c0 2.904 2.332 5.266 5.2 5.266z"/>
+                                                    <path d="M8.163 14.735a9.943 9.943 0 0 0 3.105-1.303 1.6 1.6 0 0 0 .491-2.189 1.553 1.553 0 0 0-2.16-.499 6.712 6.712 0 0 1-7.198 0 1.553 1.553 0 0 0-2.16.5 1.6 1.6 0 0 0 .49 2.188 9.956 9.956 0 0 0 3.105 1.303L.847 17.763a1.602 1.602 0 0 0 0 2.244 1.552 1.552 0 0 0 2.217 0l2.935-2.976 2.939 2.976c.611.62 1.603.62 2.214 0a1.6 1.6 0 0 0 0-2.244l-2.989-3.028"/>
+                                                </g>
+                                            </svg>
+                                //
+                                    section.video
+                                        h2.video__h Прямая трансляция
+                                section.schedule.js-scroll-block#schedule
+                                    h2.schedule__h Расписание
+                                    //.schedule__row--active .schedule__row--disabled
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 10:00 - 11:00
+                                        div.schedule__col-span
+                                            div.schedule__reg Регистрация, утренний кофе
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 11:00 - 11:05
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Олег Адрианов и Юрий Ветров
+                                            div.schedule__descr Mail.Ru и VK
+                                        div.schedule__col-4
+                                            div.schedule__title Kick-Off
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 11:05 - 11:15
+                                        div.schedule__col-span
+                                            div.schedule__win Награждение участников конкурса на Dribble и анонс Russian Design Cup
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 11:15 - 11:45
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Денис Шумов
+                                            div.schedule__descr M18
+                                        div.schedule__col-4
+                                            div.schedule__title Конкурсы концептов
+                                    div.schedule__row.schedule__row--prev
+                                        div.schedule__col-1
+                                            div.schedule__time 11:45 - 12:15
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Андрей Гаргуль
+                                            div.schedule__descr Shopify
+                                        div.schedule__col-4
+                                            div.schedule__title Дизайн успешных продуктов. Опыт Shopify
+                                    div.schedule__break.schedule__break--first
+                                        div.schedule__break__button
+                                            div.schedule__break__button-title Кофе-брейк
+                                            div.schedule__break__button-time C 12:15 до 12:30
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 12:30 - 13:00
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Глеб Кузнецов
+                                            div.schedule__descr Fantasy
+                                        div.schedule__col-4
+                                            div.schedule__title Inspiration (как создать то, чего еще не было)
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 13:00 - 13:30
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Александр Лагута
+                                            div.schedule__descr m2h
+                                        div.schedule__col-4
+                                            div.schedule__title Проверка боем. Обратная связь высокого качества
+                                    div.schedule__row.schedule__row--prev
+                                        div.schedule__col-1
+                                            div.schedule__time 13:30 - 14:00
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Николай Березовский
+                                            div.schedule__descr Альфа-Лаборатория
+                                        div.schedule__col-4
+                                            div.schedule__title Мастер-класс по Finto
+                                    div.schedule__break.schedule__break--second
+                                        div.schedule__break__button
+                                            div.schedule__break__button-title Обед
+                                            div.schedule__break__button-time C 14:00 до 15:00
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 15:00 - 15:30
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Рустем Мусабеков
+                                            div.schedule__descr Raindrop
+                                        div.schedule__col-4
+                                            div.schedule__title Работа над собственным продуктом Raindrop
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 15:30 - 16:00
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img.schedule__ava-img--double(src="upload/ava@2x.png", alt="")
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Koen Bok и Jorn van Dijk
+                                            div.schedule__descr Framer
+                                        div.schedule__col-4
+                                            div.schedule__title Новая версия Framer
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 16:00 - 16:30
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Евгений Долгов
+                                            div.schedule__descr Mail.Ru Group
+                                        div.schedule__col-4
+                                            div.schedule__title Поиск единого стиля иллюстраций Mail.Ru
+                                    div.schedule__row.schedule__row--prev
+                                        div.schedule__col-1
+                                            div.schedule__time 16:30 - 17:00
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img.schedule__ava-img--double(src="upload/ava@2x.png", alt="")
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Миша Петрик и Женя Юдин
+                                            div.schedule__descr 
+                                        div.schedule__col-4
+                                            div.schedule__title Пиксель-арт Mad Max
+                                    div.schedule__break.schedule__break--first
+                                        div.schedule__break__button
+                                            div.schedule__break__button-title Кофе-брейк
+                                            div.schedule__break__button-time C 17:00 до 17:15
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 17:15 - 17:45
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Сергей Андронов
+                                            div.schedule__descr Mail.Ru и VK
+                                        div.schedule__col-4
+                                            div.schedule__title Дизайн успешных продуктов. Опыт Shopify
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 17:45 - 18:15
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Олег Андрианов
+                                            div.schedule__descr ВКонтакте
+                                        div.schedule__col-4
+                                            div.schedule__title Тонкости мобильной разработки
+                                    div.schedule__row
+                                        div.schedule__col-1
+                                            div.schedule__time 18:15 - 18:45
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img.schedule__ava-img--double(src="upload/ava@2x.png", alt="")
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Михаил Пономаренко и Андрей Сундиев
+                                            div.schedule__descr Mail.Ru
+                                        div.schedule__col-4
+                                            div.schedule__title Создание айдентики для Dribbble Meetup
+                                    div.schedule__row.schedule__row--prev
+                                        div.schedule__col-1
+                                            div.schedule__time 18:45 - 19:15
+                                        div.schedule__col-2
+                                            div.schedule__ava
+                                                img.schedule__ava-img(src="upload/ava-2@2x.png", alt="")
+                                        div.schedule__col-3
+                                            div.schedule__name Олег Чулаков
+                                            div.schedule__descr Студия Олега Чулакова
+                                        div.schedule__col-4
+                                            div.schedule__title Анимация интерфейса
+                                    section.afterparty
+                                        div.afterparty__bg
+                                        div.afterparty__inner
+                                            h2.afterparty__h Afterparty
+                                            div.afterparty__descrip да начнется угар в 20:00
+                                section.speak.js-scroll-block#speak
+                                    h2.speak__h Спикеры
+                                    div.speak__list
+                                        div.speak__item
+                                            div.speak__ava-1
+                                            div.speak__name Георгий Квасников
+                                            div.speak__post Ведущий дизайнер Fantasy Interactive
+                                        div.speak__item
+                                            div.speak__ava-2
+                                            div.speak__name Дмитрий Чута
+                                            div.speak__post Founder and CEO Chapps
+                                        div.speak__item
+                                            div.speak__ava-3
+                                            div.speak__name Олег Андрианов
+                                            div.speak__post Ведущий дизайнер VK
+                                    div.speak__descr
+                                        span.speak__descr-mark
+                                            span.speak__descr-mark-in Скоро
+                                        span.speak__descr-txt будут доступны все спикеры. Следите за обновлениями
+                    div.mobile-popup.js-mobile-popup
+                        div.mobile-popup__center
+                            div.mobile-popup__item
+                                a.mobile-popup__l.js-mobile-popup-item(href="schedule") Расписание
+                            div.mobile-popup__item
+                                a.mobile-popup__l.js-mobile-popup-item(href="speak") Спикеры
+                            div.mobile-popup__item
+                                a.mobile-popup__l.js-mobile-popup-item(href="location") Место проведения
+
+                    section.location.js-scroll-block#location
+                        h2.location__h Место проведения
+                        div.location__wrapper
+                            div.location__decor-1
+                            div.location__decor-2
+                            div.location__decor-3
+                            div.location__decor-4
+                            div.location__decor-5
+                            div.location__decor-6
+                            div.location__decor-7
+                            div.location__block
+                                div.location__addr
+                                    h3.location__name Офис Mail.Ru
+                                    div.location__place Бизнес центр "SkyLight"
+                                        br
+                                        | Ленинградский проспект 39, стр. 79
+                                    div.location__hr
+                                    div.location__trans
+                                        div.location__metro-ic
+                                        div.location__trans-h Метро:
+                                        div.location__trans-list
+                                            span.location__trans-item.location__trans-item--gr Аэропорт,
+                                            span.location__trans-item.location__trans-item--gr Динамо
+                                    div.location__trans
+                                        div.location__bus-ic
+                                        div.location__trans-h Автобусы:
+                                        div.location__trans-list
+                                            span.location__trans-item.location__trans-item--bl 6
+                                            span.location__trans-item.location__trans-item--bl 12
+                                            span.location__trans-item.location__trans-item--bl 43
+                                            span.location__trans-item.location__trans-item--bl 65
+                                            span.location__trans-item.location__trans-item--bl 70
+                                            span.location__trans-item.location__trans-item--bl 82
+                                            span.location__trans-item.location__trans-item--wh 105
+                                            span.location__trans-item.location__trans-item--wh 412
+                                            span.location__trans-item.location__trans-item--lgr M1
+                                            span.location__trans-item.location__trans-item--vl H2
+                                div.location__map#map
+
+            footer.footer
+                h2.footer__h Организаторы
+                div.footer__logos
+                    span.footer__logo.footer__logo--my
+                        <svg xmlns="http://www.w3.org/2000/svg" class="footer__mycom" viewBox="0 0 225 76">
+                        <g fill="#EF343E" fill-rule="evenodd">
+                        <path d="M104.192 25.02c-2.234-1.786-4.433-1.496-7.012.594-2.005 1.632-2.523 6.157-.299 7.945 2.238 1.777 5.684 1.337 7.683-1.021 2.013-2.354 1.85-5.738-.372-7.518zM68.55 60.402c-.189.66-.863.885-1.516.373-1.916-1.478-2.38-3.546-2.257-5.096.09-1.102.82-3.804 5.168-7.807-.104 2.883-.605 9.674-1.396 12.53zm18.597-33.228c-2.222.304-3.795 1.257-5.044 1.901 0-.12 0-.2-.01-.324.187-3.662.246-7.392.586-11.01.044-.432.084-.873.146-1.339 1.092-5.242 2.514-8.23 2.306-10.522-.084-1.102-.184-1.705-.62-2.75-.48-.959-1.184-1.534-1.936-1.997a4.652 4.652 0 0 0-.91-.56l-.019-.019h-.009c-.17-.077-.345-.152-.516-.221-2.06-.746-4.11-.158-5.478 1.55-1.234 1.541-1.662 3.368-2.082 5.223-.69 2.947-1.434 7.542-2.313 10.444-.678 2.255-2.034 5.096-3.729 6.231-1.681 1.15-3.624.651-4.362-1.802-.853-2.928-.62-6.33-.195-9.273.308-2.122 1.81-2.34 2.187-5.707.463-4.153-1.675-6.648-5.372-6.968-2.47-.227-4.53.786-5.835 3.327-1.327 2.552-1.74 5.346-1.908 8.165-.126 2.228-.095 4.776-.104 6.971-.078.151-.164.311-.257.463-1.792 3.224-5.332 6.567-6.243 5.994-.487-.327-.323-1.375-.343-1.885-.08-3.83.505-10.818.999-15.918.288-3.036-1.47-5.472-5.386-5.457-2.525.004-4.005 1.564-5.414 3.089-2.41 2.623-4.377 5.632-6.247 7.851-.313.37-.84 1.044-1.391.867-.557-.2-.607-1.011-.62-1.505-.042-2.51.046-2.03.032-4.553-.006-.595-.12-1.906-.216-2.838C26.56 1.869 23.73.47 21.3.839c-1.56.233-2.77 1.27-3.598 2.597-1.305 2.126-1.865 3.15-3.035 5.356-.841 1.607-1.096 2.065-1.604 2.887-.425.659-.981 1.3-1.606 1.4-.797.121-.881-.67-.881-.741-.03-1.22-.096-3.846-.096-4.224 0-1.464.246-4.911-2.607-5.216-6.819-.72-7.79 6.92-7.856 10.623-.066 4.01.062 6.825.135 10.858.05 3.093.058 4.867.304 7.946.286 3.43 3.083 5.302 6.17 4.306 1.603-.504 2.665-1.672 3.34-3.165.685-1.538 2.023-5.072 2.772-6.715.886-1.94 1.754-4.265 2.654-5.882.342-.634 1.123-1.038 1.696-1.002.71.053 1.028.591 1.01 1.015-.039 1.84-.174 3.438-.283 5.25-.303 3.554.089 5.943.536 7.093.348.872 1.168 1.879 2.659 2.475 2.474.94 5.352.082 6.66-2.413 1.875-3.542 2.416-6.586 4.055-10.266.425-.908 1.106-2.45 2.484-2.635.418-.04 1.488.172 1.502 1.028.017.64-.289 7.166.299 10.062.516 2.564 2.904 5.41 7.593 5.048 1.37-.106 2.679-.727 3.891-1.607 1.55-.62 3.414-2.429 5.583-6.082.693 2.43 2.474 4.546 3.406 5.716 3.149 3.972 7.794 4.119 11.381.759 1.73-1.624 2.54-3.06 3.144-4.445-.107 1.465-.222 3.042-.315 4.672C59.852 42.57 54.258 49.64 53.7 56.917c-.516 6.54 2.975 13.074 10.357 17.404 1.734 1.005 3.462 1.667 5.21 1.612a7.596 7.596 0 0 0 3.152-.78c6.166-3.046 7.227-19.559 8.86-34.109 2.667-1.528 4.07-2.32 7.684-4.009 1.853-.888 3.926-.923 3.782-4.56-.089-3.006-1.628-5.863-5.598-5.3zM155.554 22.261c-1.744 3.637-6.267 8.693-9.127 3.373-1.812-3.384-.915-8.233.662-11.963.133-.26.217-.497.293-.679v-.002c.314-.652.62-1.26.937-1.83.077-.111.135-.236.192-.372 1.786-2.589 4.31-2.862 6.57-.785 3.16 2.889 2.101 8.86.473 12.258zm68.637 1.357c-1.387-2.135-3.518-2.25-4.823-1.68-1.859.826-4.497 2.494-5.022 2.125-.03-.004-.048-.004-.048-.004-.03-.373 0-.745 0-.993-.074-3.755.478-10.577.954-15.62.013-.14.036-.258.058-.376.246-1.852-.344-3.47-1.786-4.372-.877-.63-2.078-1.011-3.61-1.007-2.53.004-4.015 1.564-5.426 3.089-2.406 2.623-4.378 5.632-6.25 7.851-.31.37-.83 1.044-1.391.867-.54-.2-.607-1.011-.611-1.505-.038-2.51.038-2.03.024-4.553-.007-.595-.108-1.906-.212-2.838C195.755 1.87 192.939.47 190.5.84c-1.554.233-2.765 1.27-3.585 2.598-1.32 2.125-1.878 3.149-3.044 5.355-1.123 2.132-1.196 2.257-2.24 3.914-.174.273-.762 1.562-1.182 1.413-.435-.154-.652-1.19-.654-1.508-.038-1.039-.376-3.855-.416-4.276-.233-2.302-.663-6.905-3.552-7.73-.697-.305-1.566-.501-2.64-.574-3.354-.213-6.63 3.094-9.094 5.013a53.69 53.69 0 0 0-1.34 1.05c-1.507-2.354-3.691-4.21-6.563-5.24-8.6-3.018-16.317 4.085-17.451 12.282-.909 2.97-1.427 6.108-1.343 9.168-3.046 2.972-5.667 4.15-8.25 4.567-3.232.488-8.47.302-8.883-4.446-.62-6.968 2.778-10.267 3.593-11.22.43-.488 1.154-.975 1.602-.488.45.506.1 1.47-.352 2.285-.731 1.199-.82 2.57.155 3.715.959 1.133 2.241 1.278 3.617.888 2.727-.737 4.13-2.796 5.053-5.258 2.085-5.422-.638-10.766-6.01-11.723-3.4-.593-7.21.504-9.716 2.803-6.777 6.243-9.413 15.903-7.475 23.67 1.595 6.38 7.785 9.991 15.188 9.514 5.76-.347 10.457-3.097 13.753-5.889a14.75 14.75 0 0 0 2.501 3.167c8.354 8.053 18.565-2.106 21.806-9.881 1.12-2.71 1.641-5.848 1.5-8.931.571-.392 1.304-.888 2.299-1.549.733-.45 1.313-.22 1.442.558-.082 3.897-.29 8.418-.383 9.894-.124 1.688-.173 6.53-.034 8.683.204 3.42 3.372 4.67 6.485 3.968 1.65-.376 2.671-1.672 3.332-3.165.686-1.538 2.104-5.035 2.778-6.716 1.118-2.757 2.698-5.287 3.187-5.882.453-.561 1.14-1.037 1.702-1.001.709.052 1.03.591 1.023 1.015-.044 1.84-.175 3.438-.294 5.249-.3 3.555.089 5.944.534 7.095.352.87 1.183 1.878 2.664 2.474 2.482.94 5.353.082 6.657-2.413 1.881-3.542 2.426-6.587 4.07-10.265.419-.909 1.099-2.452 2.473-2.642.41-.034 1.493.179 1.512 1.035.014.574-.246 5.988.14 9.172.042.412.075.784.124 1.083.328 1.952 1.808 4.104 4.723 4.622.838.232 1.808.303 2.9.232.873-.082 1.72-.356 2.54-.75a14.162 14.162 0 0 0 3.04-1.476c.944-.592 4.132-2.16 5.734-4.877 1.003-1.68.958-4.417.064-5.803z"/>
+                        </g>
+                        </svg>
+                    span.footer__logo
+                        <svg xmlns="http://www.w3.org/2000/svg" class="footer__mail" viewBox="0 0 200 71">
+                        <g fill="none" fill-rule="evenodd">
+                        <rect width="200" height="70.476" fill="#168DE2" rx="8"/>
+                        <path fill="#FCB349" d="M39.652 28.654c-.206-3.787-3.185-6.064-6.781-6.064h-.136c-4.151 0-6.453 3.08-6.453 6.579 0 3.918 2.785 6.392 6.436 6.392 4.072 0 6.75-2.813 6.943-6.142l-.009-.765zm-6.897-9.451c2.774 0 5.382 1.156 7.297 2.967v.007c0-.87.62-1.525 1.481-1.525l.217-.001c1.347 0 1.624 1.202 1.624 1.583l.007 13.522c-.095.885.967 1.342 1.557.774 2.301-2.23 5.053-11.47-1.43-16.823-6.043-4.992-14.151-4.169-18.463-1.364-4.584 2.983-7.517 9.585-4.668 15.786 3.106 6.765 11.994 8.782 17.276 6.77 2.675-1.019 3.91 2.394 1.133 3.508-4.198 1.689-15.881 1.519-21.338-7.403-3.688-6.024-3.492-16.623 6.288-22.114 7.481-4.2 17.345-3.037 23.292 2.824 6.217 6.127 5.855 17.6-.21 22.064-2.747 2.026-6.828.053-6.802-2.9l-.028-.966a10.522 10.522 0 0 1-7.233 2.836c-5.48 0-10.302-4.55-10.302-9.72 0-5.223 4.822-9.825 10.302-9.825zM139.916 38.906c-.011.837-.94 1.695-2.285 1.695-1.358 0-2.204-.937-2.204-1.765l.001-1.429c.017-.861.86-1.756 2.238-1.756 1.506 0 2.254.96 2.254 1.861l-.004 1.394zM154.613 18.676c-6.264.025-11.607 5.236-11.577 10.97v8.938c0 1.164 1.01 2.017 2.074 2.017 1.265 0 2.248-.883 2.248-1.955V29.57c-.003-3.25 3.006-6.836 7.228-6.817 1.375.006 2.278-.978 2.27-2.066-.004-.871-.667-2.018-2.243-2.012zM180.633 18.676c-1.331 0-2.19 1.03-2.19 1.978l.001 8.995c0 3.473-3.098 6.863-7.406 6.863-3.523 0-7.254-2.884-7.254-6.798v-9.01c0-.945-.751-2.028-2.243-2.028-1.054 0-2.13.834-2.13 1.988v8.98c0 5.814 5.508 10.936 11.613 10.936 6.666 0 11.78-5.394 11.78-10.908V20.66c0-1.01-.883-1.984-2.17-1.984z"/>
+                        <path fill="#FFF" d="M117.242 15.44c0 .88-.935 1.606-2.282 1.606-1.357 0-2.202-.877-2.202-1.703v-1.137c.016-.861.814-1.825 2.19-1.825 1.506 0 2.294.921 2.294 1.825v1.233zM76.689 18.693c-2.754-.04-4.864 1.47-6.165 2.474-1.444-1.462-3.294-2.353-5.194-2.464-2.004-.117-3.883.52-5.079 1.436-.418-.916-.97-1.455-1.914-1.455a2.164 2.164 0 0 0-2.138 2.198c0 1.36.013 17.664.013 17.664 0 1.014.918 2.043 2.228 2.043 1.446 0 2.245-1.04 2.245-2.049V25.436c0-1.276 2.31-2.784 4.263-2.76 1.247.016 2.73 1.178 2.73 3.008l.012 12.886c0 1.14 1.214 2.013 2.317 2.013 1.31 0 2.302-.934 2.302-2V25.562c0-1.596 2.57-2.933 4.328-2.847 1.38.067 2.598 1.485 2.598 2.847v13.004c0 1.127 1.12 2.018 2.329 2.018 1.06 0 2.288-.663 2.288-2.037V25.598c.015-4.753-4.96-6.97-7.163-6.905zM114.979 18.678c-1.344.006-2.212 1.045-2.214 2.102l.005 17.747c-.01 1.177.979 2.055 2.2 2.055 1.394 0 2.284-1.028 2.284-2.146l.01-17.627c0-1.042-1.116-2.134-2.285-2.13zM97.716 36.535c-4.042 0-7.319-3.091-7.319-6.902 0-3.814 3.277-6.903 7.319-6.903s7.319 3.09 7.319 6.903c0 3.81-3.277 6.902-7.32 6.902zm9.455-17.851c-1.262-.002-2.155.952-2.155 1.881v.725a11.798 11.798 0 0 0-7.362-2.597c-6.134-.011-11.565 4.865-11.565 10.964 0 5.592 5.175 10.932 11.565 10.932 2.584 0 5.364-.938 7.34-2.528l.006.519c0 .993.833 2.009 2.203 2.009 1.554 0 2.25-1.172 2.25-2.098V20.678c.017-.835-.956-1.993-2.282-1.994zM130.38 36.35c-2.849-.002-5.388-2.068-5.388-5.117l.004-16.871c-.004-1.166-1.012-1.98-2.243-1.98-1.432.003-2.257.998-2.257 1.98v16.887c-.017 5.243 4.576 9.352 9.803 9.352 1.552 0 2.301-1.19 2.301-2.196 0-.96-.803-2.055-2.22-2.055zM150.692 48.249c-2.663.01-4.934 2.224-4.922 4.663v3.8c0 .495.431.856.883.856.537 0 .956-.374.956-.83v-3.86c-.003-1.38 1.278-2.904 3.07-2.896.587.003.967-.417.966-.88-.002-.368-.283-.855-.953-.853zM156.587 55.836c-1.707 0-3.088-1.295-3.108-2.901v-.07c.016-1.297.922-2.392 2.172-2.762a3.27 3.27 0 0 1 .926-.131c1.704 0 3.09 1.295 3.108 2.9v.071c-.017 1.297-.923 2.39-2.175 2.763-.29.085-.6.13-.923.13zm4.932-2.94c0-2.378-2.202-4.647-4.914-4.647-.033 0-.062.003-.093.005-2.586.02-4.867 2.082-4.867 4.658 0 2.377 2.198 4.649 4.917 4.649.029 0 .06-.006.09-.006 2.589-.024 4.867-2.084 4.867-4.659zM171.245 48.249c-.565 0-.93.438-.93.842v3.82c0 1.478-1.318 2.918-3.15 2.918-1.498 0-3.084-1.225-3.084-2.89V49.11c0-.401-.317-.861-.952-.861-.447 0-.905.353-.905.845v3.817c0 2.47 2.342 4.648 4.936 4.648 2.833 0 5.008-2.292 5.008-4.638v-3.83c0-.427-.375-.842-.923-.842zM177.862 55.836c-1.57 0-2.868-1.1-3.076-2.529v-.813c.208-1.426 1.507-2.524 3.076-2.524 1.719 0 3.112 1.311 3.112 2.932 0 1.62-1.393 2.934-3.112 2.934zm.027-7.584a5.008 5.008 0 0 0-3.127 1.105v-.308c0-.396-.382-.8-.918-.8-.564.002-.977.492-.97.846v11.252c-.005.501.418.874.939.874.592 0 .968-.436.968-.913l.002-3.81c.84.668 2.013 1.063 3.106 1.063 2.717 0 4.916-2.272 4.916-4.65 0-2.59-2.306-4.662-4.916-4.659zM140.04 55.836c-1.72 0-3.113-1.313-3.113-2.934 0-1.62 1.392-2.932 3.113-2.932 1.716 0 3.111 1.311 3.111 2.932 0 1.62-1.395 2.934-3.111 2.934zm4.019-7.587c-.537 0-.916.404-.916.8v.308a5.017 5.017 0 0 0-3.129-1.105c-2.61-.003-4.918 2.07-4.918 4.66 0 2.377 2.2 4.649 4.918 4.649 1.098 0 2.277-.399 3.12-1.076 0 0 .016.356.031.423-.144 1.076-.971 2.06-2.388 2.485-.953.287-3.693-.324-3.916-.362-.644-.108-.97.417-.964.879 0 .37.314.663.953.855.813.244 2.235.393 3.479.408.934.013 4.573-.68 4.699-4.44v-7.638c.008-.354-.407-.844-.97-.846z"/>
+                        </g>
+                        </svg>
+                    span.footer__logo.footer__logo--od
+                        <svg xmlns="http://www.w3.org/2000/svg" class="footer__od" viewBox="0 0 228 50">
+                        <g fill="none" fill-rule="nonzero">
+                        <path fill="#EB722E" d="M14.545 8.269c2.825 0 5.122 2.321 5.122 5.175 0 2.851-2.298 5.173-5.122 5.173-2.822 0-5.12-2.322-5.12-5.173-.001-2.854 2.298-5.175 5.12-5.175zm0 17.67c6.823 0 12.372-5.604 12.372-12.495 0-6.894-5.548-12.5-12.372-12.5-6.822 0-12.37 5.607-12.37 12.5 0 6.89 5.548 12.495 12.37 12.495zm5.005 10.195a23.03 23.03 0 0 0 7.184-3.005c1.694-1.077 2.203-3.337 1.137-5.049a3.624 3.624 0 0 0-2.263-1.622 3.59 3.59 0 0 0-2.735.47 15.573 15.573 0 0 1-16.655 0 3.59 3.59 0 0 0-2.735-.47c-.937.215-1.751.8-2.262 1.622-1.066 1.711-.558 3.972 1.135 5.049a23.052 23.052 0 0 0 7.183 3.005l-6.916 6.989a3.688 3.688 0 0 0-.938 3.537 3.644 3.644 0 0 0 2.564 2.59 3.6 3.6 0 0 0 3.5-.949l6.795-6.866 6.799 6.867a3.6 3.6 0 0 0 2.56 1.073 3.6 3.6 0 0 0 2.562-1.073 3.675 3.675 0 0 0 1.063-2.59c0-.97-.382-1.902-1.063-2.588l-6.915-6.99z"/>
+                        <path fill="#414141" d="M109.612 28.311c.629-.337 1.79-1.396 2.184-2.775l.936-3.668a.188.188 0 0 0-.027-.166.179.179 0 0 0-.145-.077h-2.423a.18.18 0 0 0-.172.133s-.605 2.869-.906 3.64c-.3.771-1.063 1.47-1.51 1.747-.217.137-.46.228-.714.265-.258.04-.527.06-.8.06h-2.36v-5.658a.185.185 0 0 0-.18-.188h-2.423a.185.185 0 0 0-.181.188v15.21c0 .103.08.186.18.186h2.423a.185.185 0 0 0 .18-.187v-7.123h2.684c.45 0 3.056.333 3.288 2.226l.527 4.949c.02.08.091.135.173.137h2.481a.184.184 0 0 0 .146-.078.188.188 0 0 0 .026-.164s-.453-3.35-.823-5.686c-.37-2.338-2.608-2.99-2.564-2.97zm44.588 4.814a.182.182 0 0 0-.134-.063c-.067-.012-.1.024-.134.063-.34.392-.778.746-1.3 1.05-.506.298-1.083.455-1.67.453-1.318 0-2.349-.428-3.067-1.273-.724-.847-1.091-2.161-1.091-3.908 0-1.766.366-3.087 1.091-3.924.717-.834 1.748-1.256 3.068-1.256.544 0 1.085.135 1.606.397.523.259.987.624 1.363 1.072a.195.195 0 0 0 .135.064.177.177 0 0 0 .136-.062l1.566-1.84a.192.192 0 0 0-.01-.26 8.191 8.191 0 0 0-2.174-1.567c-.811-.398-1.732-.602-2.735-.602-.863 0-1.713.15-2.526.44a5.883 5.883 0 0 0-2.193 1.408c-.635.64-1.15 1.47-1.533 2.471-.383 1-.576 2.23-.576 3.658 0 1.408.193 2.629.576 3.625.382 1.004.898 1.836 1.533 2.476a5.822 5.822 0 0 0 2.193 1.406 7.47 7.47 0 0 0 2.526.44c1.026 0 1.956-.202 2.765-.6a7.86 7.86 0 0 0 2.176-1.602.194.194 0 0 0 .006-.26l-1.593-1.807h-.004zm12.728 0a.18.18 0 0 0-.133-.063c-.033-.01-.1.024-.134.063-.333.386-.769.737-1.297 1.049a3.262 3.262 0 0 1-1.67.453c-1.317 0-2.35-.428-3.07-1.273-.725-.852-1.092-2.165-1.092-3.908 0-1.762.367-3.082 1.092-3.924.72-.833 1.752-1.256 3.07-1.256.544 0 1.083.134 1.606.397a4.19 4.19 0 0 1 1.36 1.072c.034.04.083.064.136.064.051 0 .1-.022.136-.063l1.566-1.84a.192.192 0 0 0-.01-.258 8.202 8.202 0 0 0-2.173-1.568c-.814-.398-1.736-.602-2.735-.602-.864 0-1.715.15-2.529.44-.824.3-1.573.78-2.19 1.408-.637.64-1.154 1.47-1.534 2.471-.382 1.004-.577 2.235-.577 3.658 0 1.403.195 2.623.577 3.625.38 1.004.896 1.836 1.533 2.475a5.847 5.847 0 0 0 2.191 1.407c.814.29 1.665.44 2.529.44 1.023 0 1.954-.203 2.763-.602a7.844 7.844 0 0 0 2.176-1.6.193.193 0 0 0 .006-.26l-1.595-1.808v.003h-.002zm-27.66-1.043c0 .536-.102.973-.298 1.297a2.33 2.33 0 0 1-.797.798c-.354.21-.743.353-1.148.42-.455.083-.898.12-1.357.12-1.036 0-1.81-.203-2.296-.603-.48-.395-.712-1.284-.712-1.947 0-.658.226-1.523.692-1.876.479-.364 1.178-.548 2.08-.548h3.837v2.338h-.002zm2.782-5.52c0-.982-.164-1.816-.493-2.475a4.011 4.011 0 0 0-1.34-1.572c-.553-.38-1.208-.651-1.948-.812a11.012 11.012 0 0 0-2.287-.234 7.877 7.877 0 0 0-2.864.517c-.89.35-1.63.87-2.194 1.542a.19.19 0 0 0 .007.25l1.536 1.686c.035.038.084.06.135.059a.183.183 0 0 0 .134-.066c.317-.385.73-.692 1.234-.913.505-.225 1.218-.339 2.113-.339 1.135 0 1.963.195 2.46.577.487.374.726.936.726 1.72v.784h-4.426c-.81 0-1.525.129-2.12.381a4.351 4.351 0 0 0-1.51 1.024c-.401.429-.71.936-.911 1.49-.204.557-.308 1.525-.308 2.14 0 1.36.472 2.868 1.403 3.75.925.878 2.262 1.321 3.976 1.321 1.021 0 1.907-.15 2.632-.44.533-.214.956-.482 1.262-.792l.309.861c0 .104.08.188.18.188h2.425a.185.185 0 0 0 .18-.188s-.308-1.025-.308-2.432l-.003-8.026zm85.173-4.938h-2.044c-.06 0-.113.03-.147.08l-5.453 7.975-1.863 2.822V21.81a.185.185 0 0 0-.18-.187h-2.423a.186.186 0 0 0-.18.188v15.21c-.001.101.08.184.18.186h2.332c.06 0 .115-.03.148-.08l6.97-10.453v10.346c0 .104.081.187.18.187h2.48c.1 0 .181-.084.181-.187V21.812a.186.186 0 0 0-.181-.188zm-17.685 6.687c.629-.337 1.79-1.396 2.184-2.775l.935-3.668a.188.188 0 0 0-.027-.166.18.18 0 0 0-.144-.077h-2.424a.18.18 0 0 0-.172.133s-.605 2.869-.906 3.64c-.3.771-1.063 1.47-1.51 1.747a1.843 1.843 0 0 1-.715.265c-.258.04-.527.06-.8.06h-2.36v-5.658a.185.185 0 0 0-.181-.188h-2.423a.185.185 0 0 0-.18.188v15.21c0 .103.08.186.18.186h2.423c.048 0 .095-.02.128-.055a.185.185 0 0 0 .052-.132v-7.123h2.683c.451 0 3.057.333 3.29 2.226l.526 4.949c.02.08.092.136.173.137h2.48a.179.179 0 0 0 .146-.077.193.193 0 0 0 .027-.165s-.454-3.35-.824-5.686c-.37-2.338-2.606-2.99-2.561-2.97zm-11.79-6.687h-2.046c-.059 0-.114.03-.147.08l-5.451 7.975-1.863 2.825V21.812a.185.185 0 0 0-.18-.188h-2.423a.185.185 0 0 0-.18.188v15.21c0 .103.081.186.18.186h2.334c.06 0 .115-.03.148-.08l6.967-10.451V37.02c0 .104.08.187.18.187h2.48c.1 0 .181-.084.181-.187V21.812a.186.186 0 0 0-.18-.188zm-15.564 0h-2.421a.185.185 0 0 0-.181.188v5.595h-6.433v-5.595a.185.185 0 0 0-.18-.188h-2.424a.185.185 0 0 0-.18.188v15.21c0 .103.08.186.18.186h2.423c.049 0 .095-.02.129-.055a.185.185 0 0 0 .052-.132v-7.215h6.433v7.217c0 .103.08.186.18.186h2.422c.049 0 .095-.02.129-.055a.185.185 0 0 0 .051-.131V21.812a.185.185 0 0 0-.18-.188zm-86.24 9.72c0 1.873-1.536 3.392-3.431 3.392-1.896 0-3.433-1.519-3.433-3.392v-3.772c0-1.874 1.537-3.393 3.433-3.393 1.895 0 3.431 1.52 3.431 3.393v3.772zm-3.42-9.844c-3.423 0-6.2 2.75-6.2 6.139v3.612c0 3.392 2.777 6.141 6.2 6.141 3.424 0 6.2-2.75 6.2-6.14v-3.613c0-3.39-2.776-6.14-6.2-6.14zm-27.28 13.095h-6.531c.353-.663.588-1.474.703-2.412.128-1.048.323-2.387.402-3.983l.347-3.994h5.08v10.389zm4.196 0h-1.356V21.81a.185.185 0 0 0-.18-.187H57.868a.184.184 0 0 0-.18.178l-.476 6.466c-.06.98-.21 1.817-.268 2.511-.06.685-.152 1.278-.275 1.762-.125.483-.293.874-.517 1.196-.217.308-.476.65-.869.837-.393.187-1.442.269-1.442.269a.183.183 0 0 0-.148.184v6.133c0 .104.08.187.18.187h2.424c.1 0 .18-.084.18-.187V37.21h10.361v3.951c0 .104.08.187.18.187h2.42a.185.185 0 0 0 .182-.187v-6.379a.185.185 0 0 0-.181-.186h.001zm14.203-12.971h-2.424a.185.185 0 0 0-.18.187v5.596h-6.432V21.81a.185.185 0 0 0-.18-.187h-2.423a.185.185 0 0 0-.18.187v15.21c0 .103.08.187.18.187h2.423a.185.185 0 0 0 .18-.188v-7.214h6.432v7.215c0 .104.08.188.18.188h2.424c.1 0 .18-.084.18-.188v-15.21a.185.185 0 0 0-.18-.187zm-33.59 9.719c0 1.874-1.538 3.393-3.433 3.393-1.895 0-3.432-1.52-3.432-3.393v-3.772c0-1.873 1.537-3.393 3.432-3.393s3.433 1.52 3.433 3.393v3.772zm-3.42-9.844c-3.425 0-6.2 2.75-6.2 6.14v3.611c0 3.393 2.775 6.141 6.2 6.141 3.423 0 6.198-2.748 6.198-6.14v-3.613c0-3.39-2.775-6.139-6.199-6.139zm81.222.124h-9.82a.185.185 0 0 0-.18.187s.047 7.044-.506 10.036c-.22 1.197-.333 1.365-.576 1.781-.236.408-.543.709-.915.894a14.8 14.8 0 0 1-1.384.607.19.19 0 0 0-.11.233l.648 2.116a.18.18 0 0 0 .172.13l.033-.003a7.39 7.39 0 0 0 2.103-.708c.624-.329 1.16-.828 1.59-1.488.422-.645.753-1.508.985-2.56.23-1.048.39-2.456.483-3.952l.203-4.69h4.616v12.815c0 .103.08.186.18.186h2.48c.049 0 .095-.02.129-.055a.185.185 0 0 0 .052-.131V21.81a.185.185 0 0 0-.18-.188h-.003z"/>
+                        </g>
+                        </svg>
+                div.footer__menu
+                    //
+                        div.footer__menu-l-wrap
+                            a.footer__menu-l(href="tv") Трансляция
+                    div.footer__menu-l-wrap
+                        a.footer__menu-l.js-menu-l(href="schedule") Расписание
+                    div.footer__menu-l-wrap
+                        a.footer__menu-l.js-menu-l(href="speak") Спикеры
+                    div.footer__menu-l-wrap
+                        a.footer__menu-l.js-menu-l(href="location") Место проведения
+
+        //include scripts
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCkE8ierCfY8Cw329xMGYTy6BhDZ_iXi-s&amp;' async defer)
+        script(src='script/script.js')
