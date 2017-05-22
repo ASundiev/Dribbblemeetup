@@ -1295,6 +1295,7 @@ a {
 @media (max-width: 999px) {
   .container__inner {
     padding: 0px;
+    padding-top: 40px;
   }
 }
 .container__decor-1 {
@@ -1425,7 +1426,7 @@ a {
 /* --------------- schedule */
 @media (max-width: 999px) {
   .schedule {
-    padding: 48px 30px 0;
+    padding: 0px 30px 0;
   }
 }
 .schedule__h {
