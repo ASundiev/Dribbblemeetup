@@ -2005,13 +2005,13 @@ a {
 .speak__ava-1:after {
   content: "";
   display: block;
-  width: 207px;
+  width: 204px;
   height: 259px;
-  background: url(../images/s-ava-1.png) no-repeat;
+  background: url(../images/s-1-ava-promo.png) no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
   .speak__ava-1:after {
-    background: url(../images/s-ava-1@2x.png) no-repeat;
+    background: url(../images/s-1-ava-promo@2x.png) no-repeat;
     background-size: 100% auto;
   }
 }
@@ -2021,13 +2021,13 @@ a {
 .speak__ava-2:after {
   content: "";
   display: block;
-  width: 206px;
-  height: 266px;
-  background: url(../images/s-ava-2.png) no-repeat;
+  width: 203px;
+  height: 263px;
+  background: url(../images/s-2-ava-promo.png) no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
   .speak__ava-2:after {
-    background: url(../images/s-ava-2@2x.png) no-repeat;
+    background: url(../images/s-2-ava-promo@2x.png) no-repeat;
     background-size: 100% auto;
   }
 }
@@ -2037,13 +2037,93 @@ a {
 .speak__ava-3:after {
   content: "";
   display: block;
-  width: 199px;
-  height: 258px;
-  background: url(../images/s-ava-3.png) no-repeat;
+  width: 204px;
+  height: 249px;
+  background: url(../images/s-3-ava-promo.png) no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
   .speak__ava-3:after {
-    background: url(../images/s-ava-3@2x.png) no-repeat;
+    background: url(../images/s-3-ava-promo@2x.png) no-repeat;
+    background-size: 100% auto;
+  }
+}
+.speak__ava-4 {
+  height: 215px;
+}
+.speak__ava-4:after {
+  content: "";
+  display: block;
+  width: 201px;
+  height: 273px;
+  background: url(../images/s-4-ava-promo.png) no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+  .speak__ava-4:after {
+    background: url(../images/s-4-ava-promo@2x.png) no-repeat;
+    background-size: 100% auto;
+  }
+}
+.speak__ava-5 {
+  height: 215px;
+}
+.speak__ava-5:after {
+  content: "";
+  display: block;
+  width: 204px;
+  height: 252px;
+  background: url(../images/s-5-ava-promo.png) no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+  .speak__ava-5:after {
+    background: url(../images/s-5-ava-promo@2x.png) no-repeat;
+    background-size: 100% auto;
+  }
+}
+.speak__ava-6 {
+  height: 215px;
+}
+.speak__ava-6:after {
+  content: "";
+  display: block;
+  width: 204px;
+  height: 259px;
+  background: url(../images/s-6-ava-promo.png) no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+  .speak__ava-6:after {
+    background: url(../images/s-6-ava-promo@2x.png) no-repeat;
+    background-size: 100% auto;
+  }
+}
+.speak__ava-7 {
+  height: 215px;
+}
+.speak__ava-7:after {
+  content: "";
+  display: block;
+  width: 203px;
+  height: 263px;
+  background: url(../images/s-7-ava-promo.png) no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+  .speak__ava-7:after {
+    background: url(../images/s-7-ava-promo@2x.png) no-repeat;
+    background-size: 100% auto;
+  }
+}
+.speak__ava-8 {
+  height: 215px;
+}
+.speak__ava-8:after {
+  content: "";
+  display: block;
+  width: 201px;
+  height: 273px;
+  background: url(../images/s-8-ava-promo.png) no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+  .speak__ava-8:after {
+    background: url(../images/s-8-ava-promo@2x.png) no-repeat;
     background-size: 100% auto;
   }
 }
@@ -2603,6 +2683,20 @@ a {
   .footer__od {
     width: 178px;
     height: 39px;
+    top: 0;
+  }
+}
+.footer__vk {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+@media (max-width: 999px) {
+  .footer__vk {
+    width: 50px;
+    height: 50px;
     top: 0;
   }
 }

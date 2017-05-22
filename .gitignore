@@ -1,2 +1,6 @@
 www
 .DS_Store
+*~
+npm-debug.log
+/.vagrant
+/node_modules
