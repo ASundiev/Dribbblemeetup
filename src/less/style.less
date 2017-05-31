@@ -260,6 +260,28 @@
     letter-spacing: 5px;
     text-transform: uppercase;
     font-family: @font-main;
+    margin-bottom: 8px;
+    position: relative;
+    top: 390px;
+    left: 490px;
+    width: 330px;
+
+    .screen-1300({
+      top: 330px;
+      left: 414px;
+    });
+    .screen-1000({
+      top: 240px;
+      left: -25%;
+    });
+}
+
+.screen__logo-announcement_subheader {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
+    color: #000;
+    font-family: @font-main;
     position: relative;
     top: 390px;
     left: 490px;
@@ -1493,6 +1515,36 @@
         background: url(../images/s-14-ava-promo.png) no-repeat;
         .retina({
             background: url(../images/s-14-ava-promo@2x.png) no-repeat;
+            background-size: 100% auto;
+        });
+    }
+}
+
+.speak__ava-15 {
+    height: 215px;
+    &:after {
+        content: "";
+        display: block;
+        width: 204px;
+        height: 249px;
+        background: url(../images/s-15-ava-promo.png) no-repeat;
+        .retina({
+            background: url(../images/s-15-ava-promo@2x.png) no-repeat;
+            background-size: 100% auto;
+        });
+    }
+}
+
+.speak__ava-16 {
+    height: 215px;
+    &:after {
+        content: "";
+        display: block;
+        width: 204px;
+        height: 252px;
+        background: url(../images/s-16-ava-promo.png) no-repeat;
+        .retina({
+            background: url(../images/s-16-ava-promo@2x.png) no-repeat;
             background-size: 100% auto;
         });
     }
