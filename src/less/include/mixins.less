@@ -23,3 +23,15 @@
         @rules();
     }
 }
+
+.screen-999(@rules) {
+    @media (min-width: 640px) and (max-width: 999px) {
+        @rules();
+    }
+}
+
+.screen-640(@rules) {
+    @media (max-width: 639px) {
+        @rules();
+    }
+}
