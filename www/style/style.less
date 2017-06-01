@@ -617,7 +617,6 @@
     float: right;
     font-size: 0;
 }
-/* --------------- content-area */
 .content-area {
     position: relative;
     padding: 0 100px;
@@ -625,7 +624,10 @@
     .screen-1300({
         padding: 0 40px;
     });
-    .screen-1000({
+    .screen-999({
+        padding: 0;
+    });
+    .screen-640({
         padding: 0;
     });
 }
@@ -651,7 +653,12 @@
         height: 738px;
         top: -410px;
     });
-    .screen-1000({
+    .screen-999({
+        width: 518px;
+        height: 700px;
+        top: -318px;
+    });
+    .screen-640({
         display: none;
     });
 }
@@ -670,7 +677,12 @@
         height: 723px;
         top: -320px;
     });
-    .screen-1000({
+    .screen-999({
+        width: 500px;
+        height: 330px;
+        top: -250px;
+    });
+    .screen-640({
         width: 198px;
         height: 192px;
         background: url(../images/basketball-field-mobile.svg) no-repeat;
@@ -841,8 +853,19 @@
 .video {
     background: #f5f5f5;
     height: 688px;
-    padding: 40px;
+    padding: 40px 20px;
     margin-bottom: 40px;
+    overflow: hidden;
+    .screen-999({
+        margin-bottom: 0;
+        height: 550px;
+        padding: 30px 20px;
+    });
+    .screen-640({
+        margin-bottom: 0;
+        height: 310px;
+        padding: 30px 20px;
+    });
 }
 .video__h {
     font-size: 44px;
@@ -850,7 +873,7 @@
     text-transform: uppercase;
     text-align: center;
     max-width: 500px;
-    margin: 0 auto 20px;
+    margin: 0 auto 80px;
     font-family: @font-main;
     font-weight: 800;
     letter-spacing: 12px;
@@ -858,6 +881,84 @@
     position: relative;
     z-index: 2;
     color: #000;
+    .screen-640({
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 5.4px;
+        margin: 0 auto 30px;
+    });
+}
+.video__wrapper {
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+    .screen-999({
+        width: 400px;
+        height: 225px;
+    });
+    .screen-640({
+        width: 212px;
+        height: 124px;
+    });
+}
+.video__wrapper-decor-1 {
+    width: 640px;
+    height: 360px;
+    background: #000 url(../images/player.png) no-repeat;
+    z-index: 3;
+    position: relative;
+    background-size: 100% auto;
+    .retina({
+        background-image: #000 url(../images/player@2x.png);
+    });
+    .screen-999({
+        width: 400px;
+        height: 225px;
+    });
+    .screen-640({
+        width: 212px;
+        height: 124px;
+    });
+}
+.video__wrapper-decor-2 {
+    width: 776px;
+    height: 472px;
+    background: url(../images/player-gr.png) no-repeat;
+    position: absolute;
+    z-index: 1;
+    left: -54px;
+    top: -44px;
+    background-size: 100% auto;
+    .retina({
+        background-image: #000 url(../images/player-gr@2x.png);
+    });
+    .screen-999({
+        width: 515px;
+        height: 313px;
+    });
+    .screen-640({
+        width: 267px;
+        height: 154px;
+        left: -19px;
+        top: -18px;
+    });
+}
+.video__wrapper-decor-3 {
+    z-index: 2;
+    width: 1290px;
+    height: 497px;
+    background: url(../images/tv-pattern.png) no-repeat;
+    position: absolute;
+    left: -307px;
+    top: -98px;
+    background-size: 100% auto;
+    .retina({
+        background-image: url(../images/tv-pattern@2x.png);
+    });
+    .screen-1000({
+        display: none;
+    });
 }
 /* --------------- schedule */
 .schedule {
