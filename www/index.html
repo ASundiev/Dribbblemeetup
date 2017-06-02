@@ -22,8 +22,7 @@
     <div class="js-page">
         <div class="pane js-pane">
             <div class="pane__menu">
-                <a class="pane__anc pane__anc--hidden js-scroll-anc"></a>
-                <!--a.pane__anc(href="tv") Трансляция--><a class="pane__anc js-scroll-anc" href="speak">Спикеры</a><a class="pane__anc js-scroll-anc" href="schedule">Расписание</a><a class="pane__anc js-scroll-anc" href="location">Место проведения</a>
+                <a class="pane__anc pane__anc--hidden js-scroll-anc"></a><a class="pane__anc" href="tv">Трансляция</a><a class="pane__anc js-scroll-anc" href="speak">Спикеры</a><a class="pane__anc js-scroll-anc" href="schedule">Расписание</a><a class="pane__anc js-scroll-anc" href="location">Место проведения</a>
             </div>
             <div class="pane__social">
                 <a class="pane__social-l" href="https://www.facebook.com/dribbbleru/">
@@ -115,15 +114,22 @@
                     </g>
                 </svg>
                 -->
-                            <!--
-                section.video.js-scroll-block#tv
-                    h2.video__h Прямая трансляция
-                    div.video__wrapper
-                        div.video__wrapper-decor-1
-                        div.video__wrapper-decor-2
-                        div.video__wrapper-decor-3
-                
-                -->
+                            <section class="video js-scroll-block" id="tv">
+                                <h2 class="video__h">Трансляция</h2>
+                                <div class="video__wrapper">
+                                    <div class="video__wrapper-decor-1"></div>
+                                    <div class="video__wrapper-decor-2"></div>
+                                    <div class="video__wrapper-decor-3"></div>
+                                </div>
+                            </section>
+                            <section class="video js-scroll-block" id="tv">
+                                <h2 class="video__h">Трансляция 360</h2>
+                                <div class="video__wrapper">
+                                    <div class="video__wrapper-decor-1"></div>
+                                    <div class="video__wrapper-decor-2"></div>
+                                    <div class="video__wrapper-decor-3"></div>
+                                </div>
+                            </section>
                             <section class="speak js-scroll-block" id="speak">
                                 <h2 class="speak__h">Спикеры</h2>
                                 <div class="speak__list">
