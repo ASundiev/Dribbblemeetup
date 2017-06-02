@@ -11,7 +11,7 @@ html
             div.pane.js-pane
                 div.pane__menu
                     a.pane__anc.pane__anc--hidden.js-scroll-anc
-                    a.pane__anc(href="tv") Трансляция
+                    a.pane__anc.js-scroll-anc(href="tv") Трансляция
                     a.pane__anc.js-scroll-anc(href="speak") Спикеры
                     a.pane__anc.js-scroll-anc(href="schedule") Расписание
                     a.pane__anc.js-scroll-anc(href="location") Место проведения
@@ -53,20 +53,20 @@ html
 
                             div.container__inner
                                 include ./includes/social-mobile.pug                                
-                                
-                                section.video.js-scroll-block#tv
-                                    h2.video__h Трансляция
-                                    div.video__wrapper
-                                        div.video__wrapper-decor-1
-                                        div.video__wrapper-decor-2
-                                        div.video__wrapper-decor-3
+                                div#tv
+                                    section.video.js-scroll-block
+                                        h2.video__h Трансляция
+                                        div.video__wrapper
+                                            div.video__wrapper-decor-1
+                                            div.video__wrapper-decor-2
+                                            div.video__wrapper-decor-3
 
-                                section.video.js-scroll-block#tv
-                                    h2.video__h Трансляция 360
-                                    div.video__wrapper
-                                        div.video__wrapper-decor-1
-                                        div.video__wrapper-decor-2
-                                        div.video__wrapper-decor-3
+                                    section.video.js-scroll-block
+                                        h2.video__h Трансляция 360
+                                        div.video__wrapper
+                                            div.video__wrapper-decor-1
+                                            div.video__wrapper-decor-2
+                                            div.video__wrapper-decor-3
 
                                 section.speak.js-scroll-block#speak
                                     h2.speak__h Спикеры
