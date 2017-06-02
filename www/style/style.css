@@ -1139,11 +1139,11 @@ a {
   }
 }
 @media (min-width: 640px) and (max-width: 999px) {
-    .screen__logo-announcement {
-       top: 265px;
-       left: 340px;
+  .screen__logo-announcement {
+    top: 265px;
+    left: 340px;
   }
- }
+}
 @media (max-width: 639px) {
   .screen__logo-announcement {
     top: 240px;
@@ -1168,11 +1168,11 @@ a {
   }
 }
 @media (min-width: 640px) and (max-width: 999px) {
-    .screen__logo-announcement_subheader {
-       top: 265px;
-       left: 340px;
+  .screen__logo-announcement_subheader {
+    top: 265px;
+    left: 340px;
   }
- }
+}
 @media (max-width: 639px) {
   .screen__logo-announcement_subheader {
     top: 240px;
@@ -1607,14 +1607,10 @@ a {
     height: 124px;
   }
 }
-
-
-
 .video__frame {
-   width: 640px;
-   height: 360px;
+  width: 640px;
+  height: 360px;
 }
-
 @media (min-width: 640px) and (max-width: 999px) {
   .video__frame {
     width: 400px;
@@ -1627,10 +1623,6 @@ a {
     height: 124px;
   }
 }
-
-
-
-
 .video__wrapper-decor-2 {
   width: 776px;
   height: 472px;
@@ -2237,7 +2229,6 @@ a {
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 7.6px;
-    padding-top: 20px;
   }
 }
 .speak__list {
