@@ -1601,6 +1601,30 @@ a {
     height: 124px;
   }
 }
+
+
+
+  .video__frame {
+     width: 640px;
+     height: 360px;
+  }
+
+@media (min-width: 640px) and (max-width: 999px) {
+  .video__frame {
+    width: 400px;
+    height: 225px;
+  }
+}
+@media (max-width: 639px) {
+  .video__frame {
+    width: 212px;
+    height: 124px;
+  }
+}
+
+
+
+
 .video__wrapper-decor-2 {
   width: 776px;
   height: 472px;
