@@ -1610,10 +1610,10 @@ a {
 
 
 
-  .video__frame {
-     width: 640px;
-     height: 360px;
-  }
+.video__frame {
+   width: 640px;
+   height: 360px;
+}
 
 @media (min-width: 640px) and (max-width: 999px) {
   .video__frame {
