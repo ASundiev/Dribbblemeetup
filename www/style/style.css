@@ -1167,6 +1167,12 @@ a {
     left: 414px;
   }
 }
+@media (min-width: 640px) and (max-width: 999px) {
+    .screen__logo-announcement_subheader {
+       top: 265px;
+       left: 340px;
+  }
+ }
 @media (max-width: 639px) {
   .screen__logo-announcement_subheader {
     top: 240px;
